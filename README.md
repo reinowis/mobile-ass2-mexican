@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Ionic 2 App Base
 =====================
 
@@ -18,3 +19,7 @@ $ ionic start myApp
 ```
 
 More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/docs/v2/getting-started/) page.
+=======
+# mobile-ass2-mexican
+Ass2: Mexican Taco Ordering
+>>>>>>> aa79aa130c1c620598d5572418afe7264ae93c02
