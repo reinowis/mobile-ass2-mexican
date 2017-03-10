@@ -27,6 +27,28 @@
                         {
                             "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Sms\"><param name=\"android-package\" value=\"com.cordova.plugins.sms.Sms\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.SEND_SMS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-feature android:name=\"android.hardware.telephony\" android:required=\"false\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -50,6 +72,9 @@
             "PACKAGE_NAME": "io.ionic.starter"
         },
         "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-sms-plugin": {
             "PACKAGE_NAME": "io.ionic.starter"
         }
     },
@@ -87,6 +112,14 @@
             "clobbers": [
                 "navigator.splashscreen"
             ]
+        },
+        {
+            "id": "cordova-sms-plugin.Sms",
+            "file": "plugins/cordova-sms-plugin/www/sms.js",
+            "pluginId": "cordova-sms-plugin",
+            "clobbers": [
+                "window.sms"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -95,6 +128,7 @@
         "cordova-plugin-console": "1.0.5",
         "cordova-plugin-statusbar": "2.2.1",
         "cordova-plugin-device": "1.1.4",
-        "cordova-plugin-splashscreen": "4.0.2"
+        "cordova-plugin-splashscreen": "4.0.2",
+        "cordova-sms-plugin": "0.1.11"
     }
 }
